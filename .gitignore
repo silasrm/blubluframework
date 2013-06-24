@@ -1,4 +1,3 @@
 docs/DB/
 src/vendor/*
-src/app/data/cache/*
 src/app/data/logs/*.log
