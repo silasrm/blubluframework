@@ -1,0 +1,26 @@
+Framework
+
+> App\Core\Application
+  ☐ Create router with parameters inside default route
+  ✔ Load Ladybug @done (13-06-18 16:17)
+  ✔ Refactory controller loader to make more fast @done (13-06-19 00:04)
+  ✔ Redirect to /404 when erro is ControllerActionNotExistsException or ControllerNotExistsException @done (13-06-19 12:04)
+  ✔ When error is generic exception (Exception), call Module\Site\Controllers\ErrorController\indexAction() @done (13-06-19 12:04)
+
+> App\Core\Layout\Slim
+  ✔ Create generic class to set and load layout file @done (13-06-22 20:57)
+
+> App\Core\Assets
+  ✔ Create loader for Munee assets manager @done (13-06-24 00:47)
+  ✔ Integrate Munee and Layout/View class to do it callable inside view/layout file @done (13-06-24 00:47)
+  ✔ Create method to manage assets without munee and no minify e etc, only check if the internals files exists and make html tag @done (13-06-24 00:48)
+
+> App\Core\Controller
+  ✔ Refactory __destruct() to run() @done (13-06-19 00:03)
+  ✔ Create method to escape view render (setNoRender()) @done (13-06-19 00:03)
+  ✔ Method aliases to get layout class getLayout() @done (13-06-22 21:08)
+  ☐ [BUG] setNoRender() disable view and layout.
+
+> App\Core\View
+  ✔ Create method to make url passing little parameters based on Slim::urlFor() @done (13-06-22 21:18)
+    $this->getApplication()->getFramework()->urlFor('default', array('controller' => 'xxx', 'action' => 'tyy'));

@@ -1,0 +1,34 @@
+{
+	"name": "silasrm/veerlon",
+	"version": "0.1.0",
+	"type" : "application",
+	"keywords" : ["site", "app", "slim"],
+    "homepage" : "https://bitbucket.org/silasrm/veerlon",
+    "config": {
+        "vendor-dir": "src/vendor/"
+    },
+	"require": {
+		"php" : ">=5.3.7",
+		"slim/slim": "2.*",
+		"slim/extras": "dev-master",
+		"rmccue/requests": ">=1.0",
+		"padraic/security-multitool": "dev-master",
+		"ircmaxell/password-compat": "dev-master",
+		"devster/ubench": "1.1.*-dev",
+		"meenie/Munee": "*",
+		"robmorgan/phinx": "*",
+		"respect/validation": "dev-master",
+		"tedivm/stash": "dev-master",
+		"raulfraile/ladybug": "master-dev",
+		"nesbot/Carbon": "*",
+		"j4mie/paris": "dev-master"
+	},
+	"autoload": {
+		"psr-0": {
+			"App\\": "src/app/",
+			"Modules\\": "src/app/",
+			"Models\\": "src/app/"
+		}
+	},
+	"minimum-stability": "dev"
+}

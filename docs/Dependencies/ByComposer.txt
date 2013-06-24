@@ -1,0 +1,15 @@
+List of dependencies in the composer.json and a little describe of component
+
+"slim/slim": "2.*", //Micro-framework
+"slim/extras": "dev-master", //Extra feature package official by Slim Framework
+"rmccue/requests": ">=1.0", //HTTP Request tool
+"padraic/security-multitool": "dev-master", //Many security tools staying to used
+"ircmaxell/password-compat": "dev-master", //password_* PHP 5.5 functions compatibility for PHP versions early than 5.5
+"devster/ubench": "1.1.*-dev", //Benchmark
+"meenie/Munee": "*", //Assets manager
+"robmorgan/phinx": "*", //Migrations manager
+"respect/validation": "dev-master", //Validation engine
+"tedivm/stash": "dev-master", //Cache manager
+"raulfraile/ladybug": "master-dev", //Dump library
+"nesbot/Carbon": "*", //DateTime extension
+"j4mie/paris": "dev-master", //A lightweight Active Record implementation for PHP5, built on top of Idiorm

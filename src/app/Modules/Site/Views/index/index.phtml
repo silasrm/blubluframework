@@ -1,0 +1,8 @@
+<h2>Hello <?php echo $world; ?></h2>
+
+<p>Welcome to miniframework.</p>
+
+<p>
+	<a href="<?php echo $this->url(array('controller' => 'index', 'action' => 'norender')); ?>">Page with no view render</a> |
+	<a href="<?php echo $this->url(array('controller' => 'index', 'action' => 'nolayout')); ?>">Page with no layout render</a>
+</p>
