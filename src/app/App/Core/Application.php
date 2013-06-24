@@ -225,7 +225,6 @@ class Application
 			})
 			->via('GET', 'POST', 'PUT', 'DELETE')
 			->name($routeName);
-
 		}
 
 		return $this;

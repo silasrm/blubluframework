@@ -11,6 +11,7 @@ class Slim extends \Slim\View implements LayoutInterface
 {
 	protected $_disabled = false;
 	protected $_application = null;
+	protected $_layout = null;
 
 	public function __construct($application)
 	{
@@ -80,9 +81,21 @@ class Slim extends \Slim\View implements LayoutInterface
 		return $result;
 	}
 
+	public function setLayout($filename)
+	{
+		$this->_layout = 'layouts/' . $filename . '.phtml';
+
+		return $this;
+	}
+
 	public function getLayout()
 	{
 		$layout = $this->getData('layout');
+		if(is_null($layout))
+		{
+			$layout = $this->_layout;
+		}
+
 		if(is_null($layout))
 		{
 			$app = $this->getApplication()->getFramework();
@@ -114,7 +127,13 @@ class Slim extends \Slim\View implements LayoutInterface
 	public function renderNoView($viewBasePath)
 	{
 		$content = ob_get_clean();
-		$this->setTemplatesDirectory($viewBasePath);
-		echo $this->renderLayout($this->getLayout(), $content);
+
+		if(!$this->getDisabled())
+		{
+			$this->setTemplatesDirectory($viewBasePath);
+			$content = $this->renderLayout($this->getLayout(), $content);
+		}
+
+		echo $content;
 	}
 }

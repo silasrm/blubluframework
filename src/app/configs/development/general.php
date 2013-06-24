@@ -4,10 +4,10 @@ return array(
 	'mode' => 'development',
 	'debug' => true,
 	'log' => false,
-	'baseUrl' => '/fran/veerlon_new/public/',
+	'baseUrl' => '/blublu/public/',
 	'db' => array(
 		'host' => 'localhost',
-		'dbname' => 'veerlon',
+		'dbname' => 'dbname_dev',
 		'username' => 'root',
 		'password' => '',
 	),

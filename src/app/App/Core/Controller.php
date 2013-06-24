@@ -22,8 +22,6 @@ class Controller
 		$this->setApplication($application);
 		$this->setView(new View($application));
 		$this->setAsset(new Asset($this));
-
-		$this->_init();
 	}
 
 	public function getApplication()
@@ -183,6 +181,7 @@ class Controller
 	{
 		if(!$this->getApplication()->getIsDispatchable())
 		{
+			$this->_init();
 			$this->before();
 			call_user_func(array($this, $this->getActionName('Action')));
 			$this->after();
