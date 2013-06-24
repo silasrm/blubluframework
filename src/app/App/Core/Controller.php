@@ -186,7 +186,7 @@ class Controller
 			$this->before();
 			call_user_func(array($this, $this->getActionName('Action')));
 			$this->after();
-			// var_dump($this->getViewBasePath());die;
+
 			$this->getApplication()->getFramework()->config(
 				array('templates.path' => $this->getViewBasePath())
 			);

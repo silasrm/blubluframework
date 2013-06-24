@@ -48,6 +48,11 @@ class View
 		return $this->getApplication()->getLayout()->url($parameters, $route);
 	}
 
+	public function baseUrl($suffix = null)
+	{
+		return $this->getApplication()->baseUrl($suffix);
+	}
+
 	public function __set($key, $value)
 	{
 		$this->_data->$key = $value;

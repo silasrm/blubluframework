@@ -18,4 +18,5 @@ interface LayoutInterface
 	public function isDisabled($disabled = true);
 	public function render($template);
 	public function url(array $parameters = null, $route = 'default');
+	public function baseUrl($suffix = null);
 }

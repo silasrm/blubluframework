@@ -53,6 +53,11 @@ class Slim extends \Slim\View implements LayoutInterface
 		return $this->getApplication()->getFramework()->urlFor($route, $parameters);
 	}
 
+	public function baseUrl($suffix = null)
+	{
+		return $this->getApplication()->baseUrl($suffix);
+	}
+
 	public function unsetData($key)
 	{
 		unset($this->data[$key]);
