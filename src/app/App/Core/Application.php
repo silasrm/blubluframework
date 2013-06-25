@@ -20,9 +20,8 @@ class Application
 	public function __construct(&$framework)
 	{
 		$this->setFramework($framework);
-		$this->initTools();
-
 		$this->_buildConfigs();
+		$this->initTools();
 		$this->initFrameworkConfiguration();
 	}
 
@@ -357,6 +356,16 @@ class Application
 	{
 		// Ladybug_dump loader
 		\Ladybug\Loader::loadHelpers();
+
+		$dbConfig = $this->getConfig('general')->db;
+		// If exists database config, set config data to orm Idiorm, this is used in base of the Paris activerecord
+		if(!empty($dbConfig) && count($dbConfig) >= 4)
+		{
+			\ORM::configure('mysql:host=' . $dbConfig['hostname'] . ';dbname=' . $dbConfig['dbname']);
+			\ORM::configure('username', $dbConfig['username']);
+			\ORM::configure('password', $dbConfig['password']);
+			\ORM::configure('driver_options', array(\PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+		}
 
 		return $this;
 	}

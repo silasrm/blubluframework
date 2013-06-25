@@ -19,4 +19,5 @@ interface LayoutInterface
 	public function render($template);
 	public function url(array $parameters = null, $route = 'default');
 	public function baseUrl($suffix = null);
+	public function partial($viewFile, array $data = null);
 }

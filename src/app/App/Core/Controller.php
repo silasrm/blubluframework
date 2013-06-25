@@ -64,9 +64,16 @@ class Controller
 		$this->getResponse()->redirect($url);
 	}
 
-	public function getParam($key)
+	public function getParam($key, $default = 'noasUDASdasuondoasdoasn&68763712')
 	{
-		return $this->getRequest()->params($key);
+		$value = $this->getRequest()->params($key);
+
+		if($default !== 'noasUDASdasuondoasdoasn&68763712')
+		{
+			$value = ($this->getRequest()->params($key))?$this->getRequest()->params($key):$default;
+		}
+
+		return $value;
 	}
 
 	public function setView($view)

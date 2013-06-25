@@ -51,7 +51,14 @@ class Slim extends \Slim\View implements LayoutInterface
 
 	public function url(array $parameters = null, $route = 'default')
 	{
-		return $this->getApplication()->getFramework()->urlFor($route, $parameters);
+		$url = $this->getApplication()->getFramework()->urlFor($route, $parameters);
+
+		if(substr($url, -1) === '?')
+		{
+			$url = substr($url, 0, -1);
+		}
+
+		return $url;
 	}
 
 	public function baseUrl($suffix = null)
@@ -135,5 +142,20 @@ class Slim extends \Slim\View implements LayoutInterface
 		}
 
 		echo $content;
+	}
+
+	public function partial($viewFile, array $data = null)
+	{
+		$fullpathFile = $this->getTemplatesDirectory() . '/' . $viewFile;
+
+		if(!file_exists($fullpathFile))
+		{
+			throw new \App\Core\Exception\ViewNotExistsException('View file not exists: ' . $fullpathFile);
+		}
+		$data['_baseUrl'] = $this->baseUrl();
+		extract($data);
+        ob_start();
+        require $fullpathFile;
+        return ob_get_clean();
 	}
 }

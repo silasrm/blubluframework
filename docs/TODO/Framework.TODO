@@ -6,9 +6,12 @@ Framework
   ✔ Refactory controller loader to make more fast @done (13-06-19 00:04)
   ✔ Redirect to /404 when erro is ControllerActionNotExistsException or ControllerNotExistsException @done (13-06-19 12:04)
   ✔ When error is generic exception (Exception), call Module\Site\Controllers\ErrorController\indexAction() @done (13-06-19 12:04)
+  ☐ Support to controller with hifen (my-control load MyControlController)
+  ☐ Support to action with hifen (send-mail call sendMailAction())
 
 > App\Core\Layout\Slim
   ✔ Create generic class to set and load layout file @done (13-06-22 20:57)
+  ✔ Create method to include external file, like partial() of Zend_View @done (13-06-25 20:30)
 
 > App\Core\Assets
   ✔ Create loader for Munee assets manager @done (13-06-24 00:47)
@@ -19,7 +22,7 @@ Framework
   ✔ Refactory __destruct() to run() @done (13-06-19 00:03)
   ✔ Create method to escape view render (setNoRender()) @done (13-06-19 00:03)
   ✔ Method aliases to get layout class getLayout() @done (13-06-22 21:08)
-  ☐ [BUG] setNoRender() disable view and layout.
+  ✔ [BUG] setNoRender() disable view and layout. @done (13-06-25 20:30)
 
 > App\Core\View
   ✔ Create method to make url passing little parameters based on Slim::urlFor() @done (13-06-22 21:18)
