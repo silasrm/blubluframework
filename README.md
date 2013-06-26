@@ -56,7 +56,7 @@ If controller os action is not passed, using default name called index. Exemple:
 - **$this->getRequest()**: collection os methods for using with request data (this method is a Slim\Request)
 - **$this->getRequest()->isPost()**: true, if is a POST request
 
-*In controllers the **_init()** method is call early of the action method.*
+*In controllers the _init() method is call early of the action method.*
 
 ### Methods to using in view/layout ###
 - **$this->url($array, $routeName)**: make a url with data in $array using pattern of $routeName
