@@ -4,8 +4,8 @@ Blublu is a miniframework with route, orm, layout and view separated files maked
 
 ## Basic usage ##
 Url patterns:
-* *site.com/:controller/:action*
-* *site.com/:module/:controller/:action*
+- *site.com/:controller/:action*
+- *site.com/:module/:controller/:action*
 
 If module is not passed in url, first url pattern, the app using default module named site
 
@@ -27,7 +27,7 @@ If controller os action is not passed, using default name called index. Exemple:
 
 ##### Folder structure: #####
 - src/app/Modules/ __[:module]__ /
-- src/app/Modules/**[:module]**/Controllers/**[:controller]**Controller.php
+- src/app/Modules/__[:module]__/Controllers/**[:controller]**Controller.php
 - src/app/Modules/**[:module]**/Views/**[:controller]**/**[:action]**.phtml
 
 ##### Code structure: #####
