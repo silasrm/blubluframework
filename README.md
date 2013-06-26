@@ -94,7 +94,7 @@ This configurations is setted in configs/assets.php. This configuration structur
 				),
 
 #### Using Munne project with JS and CSS ####
-[Munne][https://github.com/meenie/munee] provide concatenation and minification of javascript and css files, and on the fly imagens resizing. To enable, in configs/general.php using:
+[Munne](https://github.com/meenie/munee) provide concatenation and minification of javascript and css files, and on the fly imagens resizing. To enable, in configs/general.php using:
 
 	'assets' => array(
 		'engine' => 'munee',
