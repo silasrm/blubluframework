@@ -4,9 +4,8 @@ Blublu is a miniframework with route, orm, layout and view separated files maked
 
 ## Basic usage ##
 Url patterns:
-
-	**site.com/:controller/:action**
-	**site.com/:module/:controller/:action**
+* *site.com/:controller/:action*
+* *site.com/:module/:controller/:action*
 
 If module is not passed in url, first url pattern, the app using default module named site
 
