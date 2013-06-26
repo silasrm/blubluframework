@@ -26,7 +26,7 @@ If controller os action is not passed, using default name called index. Exemple:
 	Path: *src/app/Modules/:module/*
 
 ##### Folder structure: #####
-- src/app/Modules/**[:module]**/
+- src/app/Modules/__[:module]__/
 - src/app/Modules/**[:module]**/Controllers/**[:controller]**Controller.php
 - src/app/Modules/**[:module]**/Views/**[:controller]**/**[:action]**.phtml
 
